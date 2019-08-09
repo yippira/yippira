@@ -8,10 +8,12 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
-import {MatToolbarModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule} from '@angular/material';
+import { PersonalStatementComponent } from './personal-statement/personal-statement.component';
 
 const material = [
-  MatToolbarModule
+  MatToolbarModule,
+  MatButtonModule
 ]
   
 
@@ -21,7 +23,8 @@ const material = [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    PersonalStatementComponent
   ],
   imports: [
     BrowserModule,
