@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule, MatButtonModule} from '@angular/material';
 import { PersonalStatementComponent } from './personal-statement/personal-statement.component';
+import { LatestProjectsComponent } from './latest-projects/latest-projects.component';
 
 const material = [
   MatToolbarModule,
@@ -24,7 +25,8 @@ const material = [
     LandingPageComponent,
     NavbarComponent,
     HeaderComponent,
-    PersonalStatementComponent
+    PersonalStatementComponent,
+    LatestProjectsComponent
   ],
   imports: [
     BrowserModule,
