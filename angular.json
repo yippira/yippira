@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yippira": {
+    "yippira.github.io": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "yippira:build"
+            "browserTarget": "yippira.github.io:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "yippira:build:production"
+              "browserTarget": "yippira.github.io:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "yippira:build"
+            "browserTarget": "yippira.github.io:build"
           }
         },
         "test": {
@@ -105,7 +105,7 @@
         }
       }
     },
-    "yippira-e2e": {
+    "yippira.github.io-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "yippira:serve"
+            "devServerTarget": "yippira.github.io:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yippira:serve:production"
+              "devServerTarget": "yippira.github.io:serve:production"
             }
           }
         },
@@ -134,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "yippira"
+  "defaultProject": "yippira.github.io"
 }
