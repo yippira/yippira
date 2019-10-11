@@ -12,6 +12,8 @@ import {MatToolbarModule, MatButtonModule} from '@angular/material';
 import { PersonalStatementComponent } from './personal-statement/personal-statement.component';
 import { LatestProjectsComponent } from './latest-projects/latest-projects.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { GeneticAlgoShowcaseComponent } from './genetic-algo-showcase/genetic-algo-showcase.component';
+import { ExperienceTimelineComponent } from './experience-timeline/experience-timeline.component';
 
 const material = [
   MatToolbarModule,
@@ -28,7 +30,9 @@ const material = [
     HeaderComponent,
     PersonalStatementComponent,
     LatestProjectsComponent,
-    TimelineComponent
+    TimelineComponent,
+    GeneticAlgoShowcaseComponent,
+    ExperienceTimelineComponent
   ],
   imports: [
     BrowserModule,

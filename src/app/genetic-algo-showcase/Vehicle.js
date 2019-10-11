@@ -1,9 +1,12 @@
 var mr = 0.03;
-class Vehicle {
+// import * as p5 from 'p5';
+// var p = p5();
+
+export default class Vehicle {
     constructor(x, y, dna) {
-        this.acceleration = createVector(0, 0);
-        this.velocity = createVector(0, -2);
-        this.position = createVector(x, y);
+        this.acceleration = p.createVector(0, 0);
+        this.velocity = p.createVector(0, -2);
+        this.position = p.createVector(x, y);
 
         this.r = 6;
         this.maxSpeed = 8;
@@ -12,10 +15,10 @@ class Vehicle {
 
         this.dna = [];
         if (dna === undefined) {
-            this.dna[0] = random(-3, 3);
-            this.dna[1] = random(-3, 3);
-            this.dna[2] = random(0, 100);
-            this.dna[3] = random(0, 100);
+            this.dna[0] = p5.random(-3, 3);
+            this.dna[1] = p5.random(-3, 3);
+            this.dna[2] = p5.random(0, 100);
+            this.dna[3] = p5.random(0, 100);
         } else {
             this.dna[0] = dna[0];
             this.dna[1] = dna[1];
@@ -30,12 +33,12 @@ class Vehicle {
     mutate(dnaList) {
 
         for (let i = 0; i < dnaList.length; i++) {
-            if (random(1) < mr) {
+            if (p5.random(1) < mr) {
                 if (i == 2 || i == 3) {
-                    this.dna[i] += random(-30, 30);
+                    this.dna[i] += p5.random(-30, 30);
                 }
                 if (i == 1 || i == 0) {
-                    this.dna[i] += random(-0.5, 0.5);
+                    this.dna[i] += p5.random(-0.5, 0.5);
                 }
             }
         }
@@ -109,12 +112,12 @@ class Vehicle {
             return this.seek(closest);
         }
 
-        return createVector(0, 0);
+        return p5.createVector(0, 0);
 
     }
 
     clone() {
-        if (random(1) < 0.002) {
+        if (p5.random(1) < 0.002) {
             return new Vehicle(this.position.x, this.position.y, this.dna);
         } else {
             return null;
